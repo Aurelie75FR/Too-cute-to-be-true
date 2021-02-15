@@ -1,0 +1,28 @@
+
+
+
+Nom: Too Cute to Be True!!
+
+Description : c'est un jumpscare game avec un perso(le joueur) de dos avec un decor de couloir, au bout de ce couloir, il y a 3 portes et il faut en choisir une. Le but est de ne pas tomber sur la porte "piegé" au risque de voir poper une image trop mignonne avec un cri effroyable.
+A la base je voulais faire 5 niveaux (1,2 = une porte piégé/3,4 = deux portes piégées/5 les trois sont piégées sauf une qui est cachée dans le décor), là je vais voir pour plutôt en faire 3 avec des indices. 
+
+Début du projet : 
+
+-commencer une bases html et repartir des box 
+.premier plan(box) le perso et l'indice
+.second plan(box2) le decor et indicateur de round
+.troisième plan (box3) les trois portes(grid ou flex pour le css)
+.ajouter des images
+
+-le css
+.position des box
+.position et animation des portes
+.ce qui est clickable ou pas
+.transition sur les portes piégées
+
+-javascript (je vais saigner des yeux)
+.transition entre les niveaux 
+.action sur le clickable
+.random des portes piégées
+.alert sur les indices entre le niveaux
+.demander des tonnes de conseil au prof et TA's
