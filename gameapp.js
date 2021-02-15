@@ -1,4 +1,4 @@
-const door1 = document.querySelector(".door-One");
+const door1 = document.querySelector(".trap-door-One");
 const door2 = document.querySelector(".door-Two");
 const door3 = document.querySelector(".door-Three");
 
