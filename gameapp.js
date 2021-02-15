@@ -1,17 +1,21 @@
-const door1 = document.querySelector(".trap-door-One");
-const door2 = document.querySelector(".door-Two");
-const door3 = document.querySelector(".door-Three");
+const doors = document.querySelectorAll(".door-One, .door-Two, .door-Three");
+const backDoors = document.querySelectorAll(
+  "#backDoor-1, #backDoor-2, #backDoor-3");
 
-door1.addEventListener("click", toggleDoor1);
-door2.addEventListener("click", toggleDoor2);
-door3.addEventListener("click", toggleDoor3);
+let jumpscare = 0;
 
-function toggleDoor1() {
-  door1.classList.toggle("doorOpen");
+function shuffle() {
+  backDoors[jumpscare].setAttribute("#backDoor-1", "#backDoor-2", "#backDoor-3");
+  let random = Math.floor(Math.random() * backDoors.length);
+  let door = backDoors[random];
+  door.setAttribute("src", "Images/scary.gif");
+  jumpscare = random;
 }
-function toggleDoor2() {
-  door2.classList.toggle("doorOpen");
-}
-function toggleDoor3() {
-  door3.classList.toggle("doorOpen");
-}
+
+doors.forEach(function (element) {
+  function toggleDoor() {
+    element.classList.toggle("doorOpen");
+  }
+
+  element.addEventListener("click", toggleDoor);
+});

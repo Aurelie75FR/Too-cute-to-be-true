@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
 
-.first-text{
+.first-text {
     text-align: center;
     font-family: 'Reggae One';
     font-size: 48px;
 }
 
-#door-choice{
+#door-choice {
     display: flex;
     justify-content: space-evenly;
 }
@@ -22,7 +22,7 @@
     margin-top: 50px;
 }
 
-.trap-door-One,
+.door-One,
 .door-Two,
 .door-Three {
     /* background-color: rgb(148, 16, 16); */
@@ -30,20 +30,20 @@
     position: absolute;
     width: 200px;
     height: 390px;
-    box-shadow: 4px 2px;
+    box-shadow: 0 2px 4px 0;
     transform-origin: right;
     transition: all 0.5s ease-in-out;
 }
 
 .doorOpen {
-   transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(105deg);
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(105deg);
 }
 
-.trap1{
+/* .trap1 {
     position: absolute;
     width: 200px;
     height: 390px;
     transition: all 2s ease-in-out;
     background-size: cover;
 
-}
+} */
