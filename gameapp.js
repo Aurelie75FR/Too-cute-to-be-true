@@ -1,21 +1,27 @@
-const doors = document.querySelectorAll(".door-One, .door-Two, .door-Three");
-const backDoors = document.querySelectorAll(
-  "#backDoor-1, #backDoor-2, #backDoor-3");
 
-let jumpscare = 0;
+let btn = document.getElementById('btn')
+btn.addEventListener('click', shuffle)
+const doors = document.querySelectorAll(".back")
+let redcard = 0;
+
+shuffle()
 
 function shuffle() {
-  backDoors[jumpscare].setAttribute("#backDoor-1", "#backDoor-2", "#backDoor-3");
-  let random = Math.floor(Math.random() * backDoors.length);
-  let door = backDoors[random];
-  door.setAttribute("src", "Images/scary.gif");
-  jumpscare = random;
+    let allcards = document.getElementsByClassName("img");
+    allcards[redcard].setAttribute('src', "./Images/dark-room.jpg")
+    let random = Math.floor(Math.random() * allcards.length); 
+    let card = allcards[random];
+    card.setAttribute('src', "./Images/scary.gif");
+    redcard = random
 }
 
-doors.forEach(function (element) {
-  function toggleDoor() {
-    element.classList.toggle("doorOpen");
-  }
 
-  element.addEventListener("click", toggleDoor);
-});
+
+doors.forEach(function (element) {
+    function toggleDoor() {
+      element.classList.toggle("doorOpen");
+    }
+  
+    element.addEventListener("click", toggleDoor);
+  });
+  

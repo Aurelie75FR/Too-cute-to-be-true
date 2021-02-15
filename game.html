@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="game.css">
-    <script type="module" src="./gameapp.js"></script>
-    <title>Too cute to be true</title>
+    <title>test</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./script.js"></script>
+
 </head>
 
-<body>
-    <!-- <img src="./Images/3-doors.jpg" alt=""> -->
-    <p class="first-text">Choose Your Destiny</p>
-    <section id="door-choice">
+    
+    <body>
+        <div class="container">
+            <h3>Choose Your Destiny</h3>
 
-        <div id="backDoor-1">
-
-            <div class="door-One">
-
+        
+            <div class="doors">
+                <div class="door1">
+                
+                    <div class="front">
+                        <img class="img" src="./Images/dark-room.jpg" width="200" height="390">
+                    </div>
+                    <div class="back"></div>
+                </div>
+                <div class="door2">
+                    
+                    <div class="front">
+                        <img class="img" src="./Images/dark-room.jpg" width="200" height="390">
+                    </div>
+                    <div class="back"></div>
+                </div>
+                <div class="door3">
+                  
+                    <div class="front">
+                        <img class="img" src="./Images/dark-room.jpg" width="200" height="390">
+                    </div>
+                    <div class="back"></div>
+                </div>
             </div>
+
+    
+            <button id="btn">Générer</button>
         </div>
-        <div id="backDoor-2">
-            <div class="door-Two"></div>
-        </div>
-        <div id="backDoor-3">
-            <div class="door-Three"></div>
-        </div>
-        <!-- <img class="trap1" src="./Images/scary.gif" alt="">
-        <audio src="https://freesound.org/people/TheSubber13/sounds/239900/"></audio> -->
-    </section>
 
-
-
-
-</body>
-
+        
+    </body>
 </html>
