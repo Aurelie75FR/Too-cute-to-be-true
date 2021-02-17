@@ -1,49 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="./script.js"></script>
+    <link rel="stylesheet" href="game.css">
+    <script type="module" src="./gameapp.js"></script>
 
 </head>
 
-    
-    <body>
-        <div class="container">
-            <h3>Choose Your Destiny</h3>
 
-        
-            <div class="doors">
-                <div class="door1">
-                
-                    <div class="front">
-                        <img class="img" src="./Images/dark-room.jpg" width="200" height="390">
-                    </div>
-                    <div class="back"></div>
-                </div>
-                <div class="door2">
-                    
-                    <div class="front">
-                        <img class="img" src="./Images/dark-room.jpg" width="200" height="390">
-                    </div>
-                    <div class="back"></div>
-                </div>
-                <div class="door3">
-                  
-                    <div class="front">
-                        <img class="img" src="./Images/dark-room.jpg" width="200" height="390">
-                    </div>
-                    <div class="back"></div>
-                </div>
-            </div>
-
-    
-            <button id="btn">Générer</button>
+<body>
+    <div class="container">
+        <div class="" id="gamestart">
+            <h1>Too cute to be true</h1>
+            <p>Try to survive</p>
         </div>
 
-        
-    </body>
+        <div class="hide" id=gameOver>
+            <h1>Game Over</h1>
+            <p>Better Luck next time</p>
+            <input class="" id="newGame" type="button" value="Wanna Try...Again?!">
+        </div>
+        <div class="score">Score: <span id="score">0</span></div>
+
+
+        <div class="doors">
+            <div class="door1">
+
+                <div class="front">
+                    <img class="img" src="./Images/dark-room.jpg" width="150" height="350">
+                </div>
+                <div class="back"></div>
+            </div>
+            <div class="door2">
+
+                <div class="front">
+                    <img class="img" src="./Images/dark-room.jpg" width="150" height="350">
+                </div>
+                <div class="back"></div>
+            </div>
+            <div class="door3">
+
+                <div class="front">
+                    <img class="img" src="./Images/dark-room.jpg" width="150" height="350">
+                </div>
+                <div class="back"></div>
+            </div>
+            <div class="door4">
+
+                <div class="front">
+                    <img class="img" src="./Images/dark-room.jpg" width="150" height="350">
+                </div>
+                <div class="back"></div>
+            </div>
+
+        </div>
+
+
+        <!-- <button id="btn">Générer</button> -->
+    </div>
+
+
+</body>
+
 </html>

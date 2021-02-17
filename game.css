@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
 
-h3{
+h3 {
     font-family: 'Reggae One';
     font-size: x-large;
+    text-align: center;
+}
+
+#gamestart {
+    background: rgb(175, 7, 7);
     text-align: center;
 }
 
@@ -15,18 +20,15 @@ h3{
 
 
 .front {
-    /* background: url(./Images/dark-room.jpg); */
     position: absolute;
-    width: 200px;
-    height: 390px;
 
 }
 
 .back {
     background: url(./Images/2021-02-14\ 14_29_52.133+0100.jpg);
     position: relative;
-    width: 200px;
-    height: 390px;
+    width: 150px;
+    height: 350px;
     box-shadow: 0 2px 4px 0;
     transform-origin: right;
     transition: all 0.5s ease-in-out;
@@ -36,17 +38,13 @@ h3{
     transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(105deg);
 }
 
-button#btn {
-
-    margin-top: 20%;
-    margin-left: 18%;
-    font-size: 50px;
-    width: 70%;
-
-}
 
 
 .back:hover {
     transition: 0.3s;
     box-shadow: 0px 0px 20px 3px rgb(175, 7, 7);
+}
+
+.hide {
+    display: none;
 }
