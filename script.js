@@ -18,19 +18,20 @@ function toggleDoor(evt) {
   const parentDoor = evt.target.parentElement;
   const img = parentDoor.querySelector(".img");
   console.log(img.src);
-  if (img.src === "http://127.0.0.1:5501/data/badnews.jpg") {
-  gameOver()  
-  console.log("dead");
+  if (img.src === "https://aurelie75fr.github.io/Too-cute-to-be-true/data/badnews.jpg") {
+    gameOver();
+    console.log("dead");
   } else {
     console.log("tout va bien");
   }
-  //ecrire condition pour déterminer si img === win ou loose
   evt.target.classList.toggle("doorOpen");
 }
 
 function gameOver() {
- let surprise = document.querySelector("#gameOver");
+  let surprise = document.querySelector("#gameOver");
   surprise.classList.toggle("hide");
+  let audio = document.querySelector("#scream");
+  audio.play();
 }
 
 doors.forEach(function (doorMove) {
@@ -39,3 +40,5 @@ doors.forEach(function (doorMove) {
 
 shuffleOnclick.addEventListener("click", shuffle);
 console.log(shuffleOnclick);
+
+//script.js:20 https://aurelie75fr.github.io/Too-cute-to-be-true/data/badnews.jpg
