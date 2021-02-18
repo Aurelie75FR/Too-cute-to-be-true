@@ -1,60 +1,41 @@
-const nextDay = document.getElementById("generateNewDay")
 const doors = document.querySelectorAll(".back");
 const start = document.getElementById("gameStart");
-const jumpscare = document.getElementById("gameOver");
+var shuffleOnclick = document.querySelector(".generate");
+
+console.log(shuffleOnclick);
 let rooms = 0;
-let score = 0;
 shuffle();
-
-// function gamePlay(){
-//   let init = gameStart()
-//   // let play = 
-// }
-
 
 function shuffle() {
   let allDoors = document.getElementsByClassName("img");
   let random = Math.floor(Math.random() * allDoors.length);
+  console.log(random);
   let trap = allDoors[random];
-  trap.setAttribute("src", "./Images/zut.gif");
- }
-
-function setScore() {
-  const scoreText = document.getElementById("score");
-  score++;
-  scoreText.innerHTML = score;
-  // if(score = 5){
-  //   // endGame()
-  // }
-  console.log(score);
+  trap.setAttribute("src", "./data/badnews.jpg");
 }
-
-function youLose() {
-  jumpscare.classList.toggle("hide");
-}
-jumpscare.addEventListener("click", youLose);
 
 function toggleDoor(evt) {
   const parentDoor = evt.target.parentElement;
   const img = parentDoor.querySelector(".img");
   console.log(img.src);
-  if (img.src === "http://127.0.0.1:5500/Images/zut.gif") {
-    youLose();
-    console.log("dead");
+  if (img.src === "http://127.0.0.1:5501/data/badnews.jpg") {
+  gameOver()  
+  console.log("dead");
   } else {
-    setScore();
     console.log("tout va bien");
   }
+  //ecrire condition pour déterminer si img === win ou loose
   evt.target.classList.toggle("doorOpen");
 }
 
-function gameStart(evt) {
-  evt.target.classList.toggle("hide");
+function gameOver() {
+ let surprise = document.querySelector("#gameOver");
+  surprise.classList.toggle("hide");
 }
-start.addEventListener("click", gameStart);
 
 doors.forEach(function (doorMove) {
   doorMove.addEventListener("click", toggleDoor);
 });
-// nextDay.addEventListener('click',shuffle)
-// console.log(nextDay)
+
+shuffleOnclick.addEventListener("click", shuffle);
+console.log(shuffleOnclick);

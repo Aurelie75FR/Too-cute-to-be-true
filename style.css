@@ -1,43 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100&display=swap');
 
-h3 {
-    font-family: 'Reggae One';
-    font-size: x-large;
+body {
+    background: url(./data/background.jpg)no-repeat;
+    background-size: cover;
+    height: 573px;
+    width: 853px;
+}
+
+h1 {
+    margin-top: 18px;
+    font-family: 'Truculenta';
+    color: white;
+    opacity: 25%;
+    font-size: 3rem;
     text-align: center;
 }
 
-#gameStart {
-    background: rgb(175, 7, 7);
-    text-align: center;
+.generate {
+    font-family: 'Truculenta';
+    font-size: 30px;
+    opacity: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 1px dotted white;
+    background: none;
 }
-
 
 .doors {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 63px;
 }
-
-
 
 .front {
     position: absolute;
-
+    width: 150px;
+    height: 350px;
+    background: url(./data/goodnews.jpg);
 }
 
 .back {
-    background: url(./Images/2021-02-14\ 14_29_52.133+0100.jpg);
+    background: url(./data/rustdoor.jpg);
+    /* background: brown; */
+    background-size: contain;
     position: relative;
     width: 150px;
     height: 350px;
     box-shadow: 0 2px 4px 0;
     transform-origin: right;
     transition: all 0.5s ease-in-out;
+
 }
 
 .doorOpen {
     transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(105deg);
 }
-
 
 
 .back:hover {
@@ -48,3 +67,21 @@ h3 {
 .hide {
     display: none;
 }
+
+
+
+/* .darken{
+    animation: darken 1s ease both;
+  }
+  
+  @keyframes darken{
+    from{ background-color: white; color: #666;}
+    to{ background-color: black; color: #000;}
+  }
+  
+  .jumpscare{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } */
